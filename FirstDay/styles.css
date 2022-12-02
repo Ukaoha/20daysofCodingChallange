@@ -1,0 +1,23 @@
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+main{
+    margin: 0 auto;
+    width: 200px;
+    margin-top: 200px;
+}
+
+.btn{
+    
+    padding:.8rem 2rem;
+    border-radius: .8rem 0rem .8rem .8rem  ;
+    font-size: 14px;
+    font-weight: 600;
+    outline: none;
+    border:  none;
+    color: #fff;
+    background-color: #2752db;
+    box-shadow: 0 10px 20px 0 rgba(39 82 219 / 15%);
+}
