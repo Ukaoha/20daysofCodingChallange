@@ -6,6 +6,7 @@
 main{
     margin: 0 auto;
     width: 200px;
+    height: 60vh;
     margin-top: 200px;
 }
 
@@ -20,4 +21,23 @@ main{
     color: #fff;
     background-color: #2752db;
     box-shadow: 0 10px 20px 0 rgba(39 82 219 / 15%);
+}
+
+.color{
+    font-size:  2rem;
+    margin-bottom: 50px;
+    color: #eee;
+}
+footer {
+    text-align: center;
+    font-size: 1rem;
+}
+footer i {
+    color: red;
+    font-size: 1rem;
+    
+}
+footer a{
+    text-decoration: none;
+    color: black;
 }

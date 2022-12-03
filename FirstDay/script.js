@@ -1,20 +1,27 @@
-'use strict'
-/* create a function that generates random colors using math.random  and math.trunc 
- multiply it by hexacode ( 16777215) is a number representing rgba  then turn it to string by using toString()
- */ 
+"use strict";
+// declraing varibles , hexadecimal is a 16 digit number
+const hexColor = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, "A", "B", "C", "D", "E", "F"];
+const btn = document.querySelector(".btn");
+const color = document.querySelector(".color");
 
- const randomColors = () => {
-    const randomColors = "#" + Math.trunc(Math.random() * 16777215).toString(16);
-    return randomColors
- };
+// create a function that picks all hex numbers randomly .
+function randomColor() {
+    return Math.floor(Math.random() * hexColor.length);
+}
 
-//  create an event listner , for every click the background changes color
-
-const btnClick = document.querySelector('.btn');
-
-btnClick.addEventListener("click", function(e) {
+// loop through the random colors and add an eventlistner .
+btn.addEventListener("click", function (e) {
     e.preventDefault()
-    const colorFlip = (document.querySelector("body").style.backgroundColor = randomColors());
-})
+    let firstHexColor = "#";
+    let secondHexColor = "#";
+    for (let i = 0; i < 6; i++) {
+        let firstRandomNumber = randomColor();
+        let secondRandomNumber = randomColor();
+        firstHexColor += hexColor[firstRandomNumber];
+        secondHexColor += hexColor[secondRandomNumber];
+    }
 
-// task completed !!
+    color.textContent = `${firstHexColor} ${secondHexColor}`;
+    document.body.style.backgroundImage = "linear-gradient(to right," + firstHexColor + "," + secondHexColor + ")";
+});
+
